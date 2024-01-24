@@ -6,7 +6,7 @@ import {
     Radio,
     RadioGroup,
     FormControl,
-    FormLabel, Typography
+    FormLabel, Typography, Grid
 } from '@mui/material';
 import theme from "../elements/Theme";
 import emailjs from '@emailjs/browser';
@@ -36,6 +36,12 @@ const EnrollFormFrame: React.FC = () => {
         setFormValues({...formValues, [event.target.name]: event.target.value});
     };
 
+    const encoragementLines = [
+        '✅ A caring atmosphere where children feel at home',
+        '✅ A multicultural, language-immersive environment',
+        '✅ A world-leading preschool academic program'
+    ]
+
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         emailjs.init('0VR9T4-49oj__IUhF')
@@ -44,7 +50,9 @@ const EnrollFormFrame: React.FC = () => {
             'template_l1gjrmc',
             event.currentTarget,
             '0VR9T4-49oj__IUhF')
-            .then(() => {setIsSubmitted(true)})
+            .then(() => {
+                setIsSubmitted(true)
+            })
     };
 
 
@@ -58,9 +66,18 @@ const EnrollFormFrame: React.FC = () => {
                 alignItems: 'center',
 
             }}>
+            <Grid container spacing={5}>
+                {encoragementLines.map((line, index) => (
+                    <Grid item sm={12} md={4}>
+                        <Typography variant={'h3'} sx={{fontWeight: 400}}>{line}</Typography>
+                    </Grid>
+                ))}
+            </Grid>
+
             <Box
                 component="form"
                 onSubmit={handleSubmit}
+                mt='5vh'
                 sx={{
                     p: 4,
                     borderRadius: '55px',
