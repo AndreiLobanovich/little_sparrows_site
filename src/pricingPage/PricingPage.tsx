@@ -17,8 +17,8 @@ const PricingPage: React.FC = () => {
                 }
                 secondaryTitle={
                     <>
-                        Our educational packages are tailored to deliver both heartfelt care and world-leading
-                        preschool education.
+                        Our educational packages are tailored to deliver both heartfelt care<br/>
+                        and world-leading preschool education.
                     </>
                 }
             />

@@ -10,22 +10,21 @@ const DifferenceFrame: React.FC = () => {
         {
             title: 'Small groups',
             description: 'An unmatched 7:1 pupil-teacher ratio ensures your child gets the needed attention.',
-            imagePath: '/card41.jpg'
+            imagePath: '/programPage/card1.jpg'
         },
         {
             title: 'Prominent tutors',
             description: 'Children learn from prominent artists, athletes, and preschool pedagogy experts.',
-            imagePath: '/card42.jpg'
+            imagePath: '/programPage/card2.jpg'
         },
         {
             title: 'Language-immersion',
             description: 'Native-speaking teachers help your kid adopt new languages in the most natural way.',
-            imagePath: '/card43.jpg'
+            imagePath: '/programPage/card3.jpg'
         }
     ]
     return (
         <Box sx={{
-            height: '100vh',
             backgroundColor: theme.palette.primary.main,
             display: 'flex',
             flexDirection: 'column',

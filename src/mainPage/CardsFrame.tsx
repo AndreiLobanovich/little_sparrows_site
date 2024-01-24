@@ -1,5 +1,5 @@
 import React from "react";
-import {Box, Typography, useMediaQuery} from "@mui/material";
+import {Box, Grid, Typography, useMediaQuery} from "@mui/material";
 import theme from "../elements/Theme";
 import TextToppedImage from "../elements/TextToppedImage";
 
@@ -45,10 +45,10 @@ const CardsFrame: React.FC = () => {
             px: isMobile ? '20px' : '73px',
             flexDirection: 'column',
         }}>
-            <Box sx={{width: '100%', display: 'flex', flexDirection: 'row'}}>
-                {cards.slice(0, 3).map((card, index) => {
+            <Grid container spacing={4}>
+                {cards.map((card, index) => {
                     return (
-                        <Box key={index} sx={{width: '30%'}} mx='auto'>
+                        <Grid item key={index} sm={6} md={4}>
                             <TextToppedImage imagePath={card.image}>
                                 <Typography variant={'h3'} color='white'>
                                     {card.title}
@@ -57,27 +57,10 @@ const CardsFrame: React.FC = () => {
                             <Typography variant={'h4'} marginTop='10px'>
                                 {card.text}
                             </Typography>
-                        </Box>
+                        </Grid>
                     )
                 })}
-            </Box>
-            <Box height='5vh'/>
-            <Box sx={{width: '100%', display: 'flex', flexDirection: 'row'}}>
-                {cards.slice(3, 6).map((card, index) => {
-                    return (
-                        <Box key={index} sx={{width: '30%'}} mx='auto'>
-                            <TextToppedImage imagePath={card.image}>
-                                <Typography variant={'h3'} color='white'>
-                                    {card.title}
-                                </Typography>
-                            </TextToppedImage>
-                            <Typography variant={'h4'} marginTop='10px'>
-                                {card.text}
-                            </Typography>
-                        </Box>
-                    )
-                })}
-            </Box>
+            </Grid>
         </Box>
     )
 }

@@ -15,12 +15,12 @@ const StarFrame: React.FC = () => {
             alignItems: 'center',
         }}>
             {/*birdie on the left*/}
-            <img src="/birds/yellow.png" alt="Описание" style={{
+            {!isMobile && <img src="/birds/yellow.png" alt="Описание" style={{
                 position: 'absolute',
                 transform: ' translate(-120%, 10%) scaleX(-1) rotate(-30deg)',
                 width: '40%',
                 height: 'auto',
-            }}/>
+            }}/>}
             <Box sx={{display: 'flex', flexDirection: 'row', marginBottom: '10px'}}>
                 <Box width={isMobile ? '40px' : '80px'}>
                     <ResizableImage src='/star.svg'/>

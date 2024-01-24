@@ -12,23 +12,23 @@ const VideoFrame: React.FC = () => {
             px: isMobile ? '20px' : '73px',
             py: '10vh',
         }}>
-            <Grid container spacing={10} justifyContent="center" alignItems="center">
+            <Grid container spacing={10} justifyContent={isMobile ? 'left' : "center"} alignItems="center">
                 <Grid item xs={12} md={9} order={1}>
                     <video width="100%" controls>
                         <source src="sample-5s.mp4" type="video/mp4"/>
                     </video>
                 </Grid>
-                <Grid item xs={4} md={4}>
+                <Grid item sm={12} md={4}>
                     <Typography variant='h3' fontWeight={400}>
                         👉 Language-immersive programs<br/>👉 Healthy food made by a resident chef
                     </Typography>
                 </Grid>
-                <Grid item xs={4} md={4}>
+                <Grid item sm={12} md={4}>
                     <Typography variant='h3' fontWeight={400}>
                         👉 Attentive and caring staff<br/>👉 Medical and dental checkups
                     </Typography>
                 </Grid>
-                <Grid item xs={4} md={4}>
+                <Grid item sm={12} md={4}>
                     <Typography variant='h3' fontWeight={400}>
                         👉 Renowned, experienced tutors<br/>👉 Closed compound, regulated access
                     </Typography>

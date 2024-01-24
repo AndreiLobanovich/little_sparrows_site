@@ -8,13 +8,13 @@ import "slick-carousel/slick/slick-theme.css";
 
 
 const ReviewFrame: React.FC = () => {
-    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+    const isMobile = useMediaQuery(theme.breakpoints.down('md'));
     const settings = {
         dots: true,
         infinite: true,
         speed: 20000,
         autoplaySpeed: 0,
-        slidesToShow: isMobile ? 1 : 3,
+        slidesToShow: isMobile ? 2 : 3,
         slidesToScroll: 1,
         pauseOnFocus: true,
         focusOnSelect: true,

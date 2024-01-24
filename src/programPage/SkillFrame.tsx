@@ -26,7 +26,7 @@ const SkillFrame: React.FC = () => {
             <Box display='flex' justifyContent='center' alignItems='center'>
                 <Grid container spacing={5}>
                     {skills.map((skill, index) =>
-                        <Grid item xs={4}>
+                        <Grid item sm={4}>
                             <Typography variant='h3'>
                                 {skill}
                             </Typography>

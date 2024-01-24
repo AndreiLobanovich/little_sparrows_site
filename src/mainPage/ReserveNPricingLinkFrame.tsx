@@ -46,9 +46,9 @@ const ReserveNPricingLinkFrame: React.FC = () => {
             flexDirection: 'column',
         }}>
             <Box display='flex' justifyContent='center'>
-                <Grid container spacing={7} xs={12} sx={{display: 'flex', justifyContent: 'center'}}>
+                <Grid container spacing={7} sx={{display: 'flex', justifyContent: 'center'}}>
                     {ageGroups.map((ageGroup, index) => (
-                        <Grid item xs={3} key={index}>
+                        <Grid item sm={6} md={3} key={index}>
                             <Box borderRadius='53px' overflow='hidden'>
                                 <ResizableImage src={ageGroup.url} width='100%' height='auto'/>
                             </Box>

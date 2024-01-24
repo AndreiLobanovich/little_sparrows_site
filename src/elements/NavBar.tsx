@@ -11,7 +11,7 @@ const NavBar: React.FC<{ textColor?: string }> = ({textColor}) => {
     const [scrolled, setScrolled] = useState(false);
     const [drawerOpen, setDrawerOpen] = useState(false);
     const [iconWidth, setIconWidth] = useState(0);
-    const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+    const isMobile = useMediaQuery('(max-width:850px)');
     const buttons = [
         {text: 'Home', route: '/'},
         {text: 'Why us', route: '/approach'},
@@ -37,9 +37,10 @@ const NavBar: React.FC<{ textColor?: string }> = ({textColor}) => {
             if (scrolled) {
                 setIconWidth(70);
             } else {
-                setIconWidth(135);
+                setIconWidth(100);
             }
         }
+        console.log(isMobile)
     }, [isMobile, scrolled]);
 
     const handleDrawerOpen = () => {
@@ -62,7 +63,7 @@ const NavBar: React.FC<{ textColor?: string }> = ({textColor}) => {
                         <NavButton
                             route={buttonData.route}
                             children={buttonData.text}
-                            textColor={scrolled ? 'black' : textColor}
+                            textColor={scrolled || isMobile ? 'black' : textColor}
                         />
                     </ListItem>
                 ))}
@@ -113,7 +114,7 @@ const NavBar: React.FC<{ textColor?: string }> = ({textColor}) => {
                         onClick={handleDrawerOpen}
                         sx={{mr: 2}}
                     >
-                        <MenuIcon color={scrolled ? 'secondary' : 'primary'}/>
+                        <MenuIcon color={'secondary'}/>
                     </IconButton>
                     <Drawer
                         anchor="right"

@@ -27,7 +27,9 @@ const PreschoolProgramsFrame: React.FC = () => {
                     </Typography>
                 </Grid>
                 <Grid item sm={12} md={6}>
-                    <ResizableImage src={'/bestInClass.png'} width={'100%'}/>
+                    <Box borderRadius='70px' overflow={'hidden'}>
+                        <ResizableImage src={'/bestInClass.png'} width={'100%'}/>
+                    </Box>
                 </Grid>
             </Grid>
         </Box>

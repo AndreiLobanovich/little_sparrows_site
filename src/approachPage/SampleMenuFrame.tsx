@@ -3,7 +3,6 @@ import theme from "../elements/Theme";
 import {Box, Typography, useMediaQuery} from "@mui/material";
 import TextToppedImage from "../elements/TextToppedImage";
 import Slider from "react-slick";
-import {testimonials} from "../mainPage/testimonials";
 
 
 const SampleMenuFrame: React.FC = () => {

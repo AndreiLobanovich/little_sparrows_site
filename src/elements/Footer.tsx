@@ -10,7 +10,7 @@ import {Telegram, WhatsApp} from "@mui/icons-material";
 import ResizableImage from "./ResizableImage";
 
 const Footer: React.FC = () => {
-    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+    const isMobile = useMediaQuery(theme.breakpoints.down('md'));
     return (
         <Box
             sx={{
@@ -90,14 +90,13 @@ const Footer: React.FC = () => {
                 flexDirection: 'row',
                 px: isMobile ? '20px' : '73px',
                 height: '100px',
+                justifyContent: 'space-evenly',
                 alignItems: 'center'
             }}>
                 {!isMobile && (
                     <>
                         <ResizableImage src={'/eralyYearsCambridgeFooter.png'}/>
-                        <Box sx={{flexGrow: 1}}/>
                         <ResizableImage src={'/anotherCambridgeFooter.png'}/>
-                        <Box sx={{flexGrow: 1}}/>
                         <ResizableImage src={'/gerbSerb.png'}/>
                     </>
                 )}
